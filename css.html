@@ -1,0 +1,310 @@
+
+index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha CSS DIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="banner">
+        <div class="banner-content">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo Trilha CSS">
+            </div>
+
+            <h1>TRILHA DE CSS DA DIO</h1>
+
+            <p>
+                A nova Trilha de CSS da DIO está disponível. Acesse já e aprenda do zero como desenvolver sites profissionais.
+            </p>
+
+            <button>QUERO ME INSCREVER</button>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="course-content">
+            <h2>O QUE VOU APRENDER?</h2>
+
+            <p>
+                Temos 3 módulos recheados de conteúdos do básico ao avançado para que você aprenda a desenvolver páginas modernas utilizando apenas HTML e CSS.
+            </p>
+
+            <div class="modules-list">
+                <div class="module">
+                    <span>Módulo 01:</span> primeiros passos com CSS
+                </div>
+
+                <div class="module">
+                    <span>Módulo 02:</span> trabalhando com layouts no CSS
+                </div>
+
+                <div class="module">
+                    <span>Módulo 03:</span> refinando os estilos CSS das nossas páginas
+                </div>
+            </div>
+        </section>
+
+        <section id="transform-world">
+            <p>TRANSFORME O MUNDO COM A GENTE</p>
+        </section>
+
+        <section id="professional-challenges">
+            <h2>EVOLUA E ENCARE NOVOS DESAFIOS PROFISSIONAIS</h2>
+
+            <img src="assets/images/professional-challenges.png" alt="Desafios profissionais">
+
+            <p>
+                Junte-se ao nosso ecossistema e transforme sua carreira com tecnologia.
+                Aprenda com especialistas e desenvolva projetos reais.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="assets/images/dio-logo.png" alt="Logo DIO">
+
+        <p>
+            Acesse <a href="https://www.dio.me" target="_blank">dio.me</a>
+        </p>
+    </footer>
+
+</body>
+</html>
+```
+
+---
+
+# style.css
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.banner {
+    height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url('assets/images/banner.png');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid #33A8DB;
+}
+
+.banner-content {
+    width: 600px;
+    text-align: center;
+}
+
+.logo {
+    width: 260px;
+    height: 260px;
+
+    margin: auto;
+    margin-bottom: 16px;
+
+    background-color: rgba(0,0,0,.2);
+    border-radius: 50%;
+
+    padding: 16px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner h1 {
+    font-size: 40px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    background: linear-gradient(#33A8DB, #1472B7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner p {
+    font-size: 20px;
+    margin: 16px 0 24px;
+}
+
+.banner button {
+    color: #31A8DD;
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    padding: 16px 32px;
+
+    background-color: transparent;
+
+    border: 2px solid #33A8DB;
+
+    cursor: pointer;
+}
+
+#course-content {
+    width: 800px;
+
+    margin: 100px auto;
+
+    text-align: center;
+}
+
+#course-content h2,
+#professional-challenges h2 {
+    color: #33A8DB;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 24px;
+}
+
+#course-content p,
+#professional-challenges p {
+    color: white;
+
+    font-size: 16px;
+
+    margin-bottom: 24px;
+}
+
+.modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.module {
+    width: 550px;
+
+    margin: auto;
+
+    padding: 16px;
+
+    border: 1px solid #33A8DB;
+    border-radius: 50px;
+
+    background-color: #252525;
+
+    box-shadow: inset -5px 6px 8px rgba(0,0,0,.7);
+}
+
+.module span {
+    color: #33A8DB;
+}
+
+#transform-world {
+    height: 560px;
+
+    background-image: url('assets/images/woman-code.png');
+    background-size: cover;
+    background-attachment: fixed;
+
+    border-top: 1px solid #33A8DB;
+    border-bottom: 1px solid #33A8DB;
+
+    display: flex;
+    align-items: center;
+}
+
+#transform-world p {
+    width: 250px;
+
+    margin-left: 200px;
+
+    font-size: 40px;
+    font-weight: 900;
+
+    text-transform: lowercase;
+
+    text-shadow: 3px 2px #33A8DB;
+}
+
+#professional-challenges {
+    width: 800px;
+
+    margin: 100px auto;
+
+    text-align: center;
+}
+
+#professional-challenges img {
+    width: 100%;
+
+    margin: 32px 0;
+}
+
+footer {
+    padding: 60px 0;
+
+    text-align: center;
+
+    border-top: 1px solid #33A8DB;
+
+    background: linear-gradient(rgba(50,168,219,.2), rgba(0,0,0,.6));
+}
+
+footer img {
+    margin-bottom: 16px;
+}
+
+footer a {
+    color: #33A8DB;
+    text-decoration: none;
+    font-weight: bold;
+}
+```
+
+---
+
+# Estrutura das pastas
+
+```txt
+projeto/
+│
+├── index.html
+├── style.css
+│
+└── assets/
+    └── images/
+        ├── banner.png
+        ├── logo.png
+        ├── woman-code.png
+        ├── dio-logo.png
+        └── professional-challenges.png
+```
+
